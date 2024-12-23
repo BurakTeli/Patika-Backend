@@ -1,0 +1,365 @@
+﻿{
+  "configuration": {
+    "minimumSupportedOsVersion": "10.15",
+    "requiredXcodeVersion": "13.3",
+    "requiredXcodeOsVersion": "12.0"
+  },
+  "items": [
+    {
+      "name": "Mono Framework",
+      "genericName": "MONO",
+      "productId": "964ebddd-1ffe-47e7-8128-5ce17ffffb05",
+      "requiresAdminRights": "true",
+      "url": "https://download.visualstudio.microsoft.com/download/pr/198e4c80-5f95-45de-9ea8-6a65f0a55c88/3b35832139466262c3e38c13716f354e/monoframework-mdk-6.12.0.182.macos10.xamarin.universal.pkg",
+      "version": "6.12.0.182",
+      "size": 369680658,
+      "sha256": "515b25097a53e8f5bf15585e5cc3e646b3a92e114e57bad2fd63370031931c1f"
+    },
+    {
+      "name": "Visual Studio Preview",
+      "genericName": "VisualStudioMac",
+      "productId": "34937104-97FC-42A0-9159-D951135F72CA",
+      "requiresAdminRights": "false",
+      "url": "https://xamarinstorage.blob.core.windows.net/public-downloads/uploads/vsmac/vsmac/VisualStudioForMac-Preview-17.5.0.90-pre.1-x64.dmg",
+      "version": "17.5.0.90",
+      "size": 7687512508,
+      "sha256": "261c0f3b5ceccaaba1aaae4f6d3452d1c9feda1b7b99c48bf5bfd5999b41101f"
+    },
+    {
+      "name": "Visual Studio Preview",
+      "genericName": "VisualStudioMacArm",
+      "productId": "74bfdee6-25b7-40ec-a6ca-809f1ea617ec",
+      "requiresAdminRights": "false",
+      "url": "https://xamarinstorage.blob.core.windows.net/public-downloads/uploads/vsmac/vsmac/VisualStudioForMac-Preview-17.5.0.90-pre.1-arm64.dmg",
+      "version": "17.5.0.90",
+      "size": 785613516,
+      "sha256": "9205f8738f702c485dc8b1bb12c23ce92b5fccce5202056577aa75e6d93c916b"
+    },
+    {
+      "name": ".NET 7",
+      "genericName": "DotNet7Sdk",
+      "productId": "ed25c66a-d296-4e8f-8e74-d21b416f838e",
+      "dependsOn": [
+        "DotNet6Sdk"
+      ],
+      "requiresAdminRights": "true",
+      "configuration": {
+        "selectable": "true",
+        "selectedByDefault": "true",
+        "uiOrder": "1",
+        "depth": "0"
+      },
+      "url": "https://download.visualstudio.microsoft.com/download/pr/ddd5c2da-d88d-4854-8e6e-990940b972d0/d5a1e9c157ff791cdee120b6e01f075b/dotnet-sdk-7.0.100-rc.1.22431.12-osx-x64.pkg",
+      "version": "7.0.100-rc.1",
+      "size": 190876704,
+      "sha256": "dd504b6f5cd42e331932d6e91730794622babbfcf1e897ec93de5b813a1a2339"
+    },
+    {
+      "name": ".NET 7",
+      "genericName": "DotNet7ArmSdk",
+      "productId": "5ff5becc-d967-47cb-a9bc-e5b37f680740",
+      "dependsOn": [
+        "DotNet6ArmSdk"
+      ],
+      "requiresAdminRights": "true",
+      "configuration": {
+        "selectable": "true",
+        "selectedByDefault": "true",
+        "uiOrder": "1",
+        "depth": "0"
+      },
+      "url": "https://download.visualstudio.microsoft.com/download/pr/ddd5c2da-d88d-4854-8e6e-990940b972d0/0259fb0e140a91e206301ff127484501/dotnet-sdk-7.0.100-rc.1.22431.12-osx-arm64.pkg",
+      "version": "7.0.100-rc.1",
+      "size": 186276889,
+      "sha256": "681917e612a9cc5b623e0585bd6f0c5fedccc2c8a0c151611b0dbf2ffc9257de"
+    },
+    {
+      "name": ".NET 6",
+      "genericName": "DotNet6Sdk",
+      "productId": "8c83c257-841e-45d7-9b59-14027C70ff66",
+      "dependsOn": [],
+      "requiresAdminRights": "true",
+      "configuration": {
+        "selectable": "false",
+        "selectedByDefault": "true",
+        "uiOrder": "1",
+        "category": "Core",
+        "depth": "1"
+      },
+      "url": "https://download.visualstudio.microsoft.com/download/pr/516c0a6e-ef88-4b92-a669-319308af49e2/5698945309fd20da17bfa89953ee5317/dotnet-sdk-6.0.401-osx-x64.pkg",
+      "version": "6.0.401",
+      "size": 184991073,
+      "sha256": "667920bf202c420d57091f24b8051bad8ed174e131c4c15f45f79b2a785c3744"
+    },
+    {
+      "name": ".NET 6",
+      "genericName": "DotNet6ArmSdk",
+      "productId": "701632e2-a9eb-4166-8c9e-be5a53ade55a",
+      "requiresAdminRights": "true",
+      "configuration": {
+        "selectable": "false",
+        "selectedByDefault": "true",
+        "uiOrder": "1",
+        "depth": "1"
+      },
+      "url": "https://download.visualstudio.microsoft.com/download/pr/516c0a6e-ef88-4b92-a669-319308af49e2/6e6bae751e9a1d6ab2f51ec95a0d82f2/dotnet-sdk-6.0.401-osx-arm64.pkg",
+      "version": "6.0.401",
+      "size": 179141245,
+      "sha256": "74898e91854bf89fd06a47efabc7fbc275ac2e80d7ed44beb6d6d20db39017ac"
+    },
+    {
+      "name": ".NET MAUI",
+      "genericName": "maui",
+      "dependsOn": [
+        "maui-android",
+        "maui-ios",
+        "maui-maccatalyst"
+      ],
+      "requiresAdminRights": "true",
+      "delegateToSDK": "true",
+      "requiresXcode": "true",
+      "configuration": {
+        "selectable": "true",
+        "selectedByDefault": "false",
+        "uiOrder": "2",
+        "category": "CrossPlatform",
+        "depth": "0"
+      },
+      "size": 108569450
+    },
+    {
+      "name": ".NET Android",
+      "genericName": "maui-android",
+      "dependsOn": [
+        "DotNet7ArmSdk",
+        "DotNet7Sdk",
+        "ASDK",
+        "JDK11",
+        "JDK11Arm"
+      ],
+      "requiresAdminRights": "true",
+      "delegateToSDK": "true",
+      "size": 642026596
+    },
+    {
+      "name": ".NET iOS",
+      "genericName": "maui-ios",
+      "dependsOn": [
+        "DotNet7ArmSdk",
+        "DotNet7Sdk"
+      ],
+      "requiresAdminRights": "true",
+      "delegateToSDK": "true",
+      "requiresXcode": "true",
+      "size": 1049390825
+    },
+    {
+      "name": ".NET MacCatalyst",
+      "genericName": "maui-maccatalyst",
+      "dependsOn": [
+        "DotNet7ArmSdk",
+        "DotNet7Sdk"
+      ],
+      "requiresAdminRights": "true",
+      "delegateToSDK": "true",
+      "requiresXcode": "true",
+      "size": 265560473
+    },
+    {
+      "name": ".NET WebAssembly Build Tools",
+      "genericName": "blazorwasm",
+      "dependsOn": [
+        "DotNet7ArmSdk",
+        "DotNet7Sdk"
+      ],
+      "requiresAdminRights": "true",
+      "delegateToSDK": "true",
+      "requiresXcode": "true",
+      "configuration": {
+        "selectable": "true",
+        "selectedByDefault": "false",
+        "uiOrder": "3",
+        "category": "Other",
+        "depth": "0"
+      },
+      "size": 236171113
+    },
+    {
+      "name": "tvOS",
+      "genericName": "tvOS",
+      "dependsOn": [
+        "DotNet7ArmSdk",
+        "DotNet7Sdk"
+      ],
+      "requiresAdminRights": "true",
+      "delegateToSDK": "true",
+      "requiresXcode": "true",
+      "configuration": {
+        "selectable": "true",
+        "selectedByDefault": "false",
+        "uiOrder": "4",
+        "category": "Other",
+        "depth": "0"
+      },
+      "size": 738637139
+    },
+    {
+      "name": "macOS",
+      "genericName": "macOS",
+      "dependsOn": [
+        "DotNet7ArmSdk",
+        "DotNet7Sdk"
+      ],
+      "requiresAdminRights": "true",
+      "delegateToSDK": "true",
+      "requiresXcode": "true",
+      "configuration": {
+        "selectable": "true",
+        "selectedByDefault": "false",
+        "uiOrder": "5",
+        "category": "Other",
+        "depth": "0"
+      },
+      "size": 25430262
+    },
+    {
+      "name": "Xamarin.Android",
+      "genericName": "XAndroid",
+      "productId": "d1ec039f-f3db-468b-a508-896d7c382999",
+      "dependsOn": [
+        "OpenJDK",
+        "JDK11",
+        "JDK11Arm",
+        "ASDK",
+        "XProfiler",
+        "MONO"
+      ],
+      "requiresAdminRights": "true",
+      "configuration": {
+        "selectable": "true",
+        "selectedByDefault": "false",
+        "uiOrder": "6",
+        "category": "Legacy",
+        "depth": "0"
+      },
+      "url": "https://xamarin-storage.azureedge.net/dynamic/internal-preview-main/d1ec039f-f3db-468b-a508-896d7c382999/xamarin.android-13.1.0.0.pkg",
+      "version": "13.1.0.0",
+      "size": 411520497,
+      "sha256": "faf81f69900d3e31947c5a85a21abe51ccd0e299ce1f052857e604d8102eaa17"
+    },
+    {
+      "name": "Xamarin.iOS",
+      "genericName": "XIOS",
+      "productId": "4569c276-1397-4adb-9485-82a7696df22e",
+      "dependsOn": [
+        "XProfiler",
+        "MONO"
+      ],
+      "requiresAdminRights": "true",
+      "requiresXcode": "true",
+      "configuration": {
+        "selectable": "true",
+        "selectedByDefault": "false",
+        "uiOrder": "7",
+        "category": "Legacy",
+        "depth": "0"
+      },
+      "url": "https://download.visualstudio.microsoft.com/download/pr/e81e04d3-768a-4310-9c9b-f32e8ba00eaa/0e27caf0877adb5c6fe6d634d26da40a/xamarin.ios-15.12.0.2.pkg",
+      "version": "15.12.0.2",
+      "size": 881538582,
+      "sha256": "00a102a997360728e7fad37950b73918c54de10696b979e5f90ef75a560c314d"
+    },
+    {
+      "name": "Xamarin.Mac",
+      "genericName": "XAMMAC",
+      "productId": "0ab364ff-c0e9-43a8-8747-3afb02dc7731",
+      "dependsOn": [
+        "XProfiler",
+        "MONO"
+      ],
+      "requiresAdminRights": "true",
+      "requiresXcode": "true",
+      "configuration": {
+        "selectable": "true",
+        "selectedByDefault": "false",
+        "uiOrder": "8",
+        "category": "Legacy",
+        "depth": "0"
+      },
+      "url": "https://download.visualstudio.microsoft.com/download/pr/e81e04d3-768a-4310-9c9b-f32e8ba00eaa/bcff5cca8701bc5871b8892fd32fb3e6/xamarin.mac-8.12.0.2.pkg",
+      "version": "8.12.0.2",
+      "size": 148545951,
+      "sha256": "6b40010e9a7534929cd00b5cae4cbec883278c35918ec85e7d9c0fda70640080"
+    },
+    {
+      "name": "Xamarin Profiler",
+      "genericName": "XProfiler",
+      "productId": "4BBD2407-C3ED-4D32-B8CB-0559C7610697",
+      "requiresAdminRights": "true",
+      "url": "https://download.visualstudio.microsoft.com/download/pr/afed6f32-67b3-4684-b0a4-e2b74d751bce/e678aec468a1b9bf2312188fbacd5d1b/profiler-mac-1.8.0.19.pkg",
+      "version": "1.8.0.19",
+      "size": 21964848,
+      "sha256": "1da68c489977bf621ed08dd74e0892f95b8705ab2113cca3ca72b46b4860b55a"
+    },
+    {
+      "name": "Eclipse Temurin JDK",
+      "productId": "DA83F533-B2D1-41F4-866B-7E4970899D3A",
+      "genericName": "OpenJDK",
+      "requiresAdminRights": "true",
+      "configuration": {
+        "selectable": "false",
+        "selectedByDefault": "true",
+        "uiOrder": "0",
+        "depth": "1"
+      },
+      "url": "https://xamarinstorage.blob.core.windows.net/public-downloads/uploads/vsmac/vsmac/OpenJDK8U-jdk_x64_mac_hotspot_8u345b01.pkg",
+      "version": "1.8.0.345",
+      "size": 108128672,
+      "sha256": "252cc30f9434399572870ac2bb0c038f18d2ac01eb3e0d4864a809b01c942c9f"
+    },
+    {
+      "name": "Microsoft Build Of OpenJDK",
+      "productId": "73745b7c-41bf-4303-a50b-dc89cdc35279",
+      "genericName": "JDK11",
+      "requiresAdminRights": "true",
+      "configuration": {
+        "selectable": "false",
+        "selectedByDefault": "true",
+        "uiOrder": "1",
+        "depth": "1"
+      },
+      "url": "https://xamarinstorage.blob.core.windows.net/public-downloads/uploads/vsmac/vsmac/microsoft-jdk-11.0.16.1-macos-x64.pkg",
+      "version": "11.0.16.1",
+      "size": 191939634,
+      "sha256": "25fb84207bdd78a7f29983d2220c6d09cf539953f17f52cbb56a538a1bd00035"
+    },
+    {
+      "name": "Microsoft Build Of OpenJDK (ARM)",
+      "productId": "3385425a-89da-4e7d-8aed-6e86481da288",
+      "genericName": "JDK11Arm",
+      "requiresAdminRights": "true",
+      "configuration": {
+        "selectable": "false",
+        "selectedByDefault": "true",
+        "uiOrder": "1",
+        "depth": "1"
+      },
+      "url": "https://xamarinstorage.blob.core.windows.net/public-downloads/uploads/vsmac/vsmac/microsoft-jdk-11.0.16.1-macos-aarch64.pkg",
+      "version": "11.0.16",
+      "size": 188583004,
+      "sha256": "552f2d0c154110d33df54124d22957bf713ebb3e1b10b8ed47ecb8438fcdb00d"
+    },
+    {
+      "name": "Android SDK",
+      "version": "33",
+      "genericName": "ASDK",
+      "platforms": "33",
+      "configuration": {
+        "selectable": "false",
+        "selectedByDefault": "true",
+        "uiOrder": "3",
+        "depth": "1"
+      }
+    }
+  ]
+}
