@@ -1,0 +1,15 @@
+/Users/buraktelli/Projects/Değişkenler ile Uygulama/Değişkenler ile Uygulama/bin/Debug/net7.0/Değişkenler ile Uygulama
+/Users/buraktelli/Projects/Değişkenler ile Uygulama/Değişkenler ile Uygulama/bin/Debug/net7.0/Değişkenler ile Uygulama.deps.json
+/Users/buraktelli/Projects/Değişkenler ile Uygulama/Değişkenler ile Uygulama/bin/Debug/net7.0/Değişkenler ile Uygulama.runtimeconfig.json
+/Users/buraktelli/Projects/Değişkenler ile Uygulama/Değişkenler ile Uygulama/bin/Debug/net7.0/Değişkenler ile Uygulama.dll
+/Users/buraktelli/Projects/Değişkenler ile Uygulama/Değişkenler ile Uygulama/bin/Debug/net7.0/Değişkenler ile Uygulama.pdb
+/Users/buraktelli/Projects/Değişkenler ile Uygulama/Değişkenler ile Uygulama/obj/Debug/net7.0/Değişkenler ile Uygulama.csproj.AssemblyReference.cache
+/Users/buraktelli/Projects/Değişkenler ile Uygulama/Değişkenler ile Uygulama/obj/Debug/net7.0/Değişkenler ile Uygulama.GeneratedMSBuildEditorConfig.editorconfig
+/Users/buraktelli/Projects/Değişkenler ile Uygulama/Değişkenler ile Uygulama/obj/Debug/net7.0/Değişkenler ile Uygulama.AssemblyInfoInputs.cache
+/Users/buraktelli/Projects/Değişkenler ile Uygulama/Değişkenler ile Uygulama/obj/Debug/net7.0/Değişkenler ile Uygulama.AssemblyInfo.cs
+/Users/buraktelli/Projects/Değişkenler ile Uygulama/Değişkenler ile Uygulama/obj/Debug/net7.0/Değişkenler ile Uygulama.csproj.CoreCompileInputs.cache
+/Users/buraktelli/Projects/Değişkenler ile Uygulama/Değişkenler ile Uygulama/obj/Debug/net7.0/Değişkenler ile Uygulama.dll
+/Users/buraktelli/Projects/Değişkenler ile Uygulama/Değişkenler ile Uygulama/obj/Debug/net7.0/refint/Değişkenler ile Uygulama.dll
+/Users/buraktelli/Projects/Değişkenler ile Uygulama/Değişkenler ile Uygulama/obj/Debug/net7.0/Değişkenler ile Uygulama.pdb
+/Users/buraktelli/Projects/Değişkenler ile Uygulama/Değişkenler ile Uygulama/obj/Debug/net7.0/Değişkenler ile Uygulama.genruntimeconfig.cache
+/Users/buraktelli/Projects/Değişkenler ile Uygulama/Değişkenler ile Uygulama/obj/Debug/net7.0/ref/Değişkenler ile Uygulama.dll
