@@ -1,0 +1,15 @@
+/Users/buraktelli/Documents/GitHub/Patika-Backend/Week 2 /For/For/bin/Debug/net7.0/For
+/Users/buraktelli/Documents/GitHub/Patika-Backend/Week 2 /For/For/bin/Debug/net7.0/For.deps.json
+/Users/buraktelli/Documents/GitHub/Patika-Backend/Week 2 /For/For/bin/Debug/net7.0/For.runtimeconfig.json
+/Users/buraktelli/Documents/GitHub/Patika-Backend/Week 2 /For/For/bin/Debug/net7.0/For.dll
+/Users/buraktelli/Documents/GitHub/Patika-Backend/Week 2 /For/For/bin/Debug/net7.0/For.pdb
+/Users/buraktelli/Documents/GitHub/Patika-Backend/Week 2 /For/For/obj/Debug/net7.0/For.csproj.AssemblyReference.cache
+/Users/buraktelli/Documents/GitHub/Patika-Backend/Week 2 /For/For/obj/Debug/net7.0/For.GeneratedMSBuildEditorConfig.editorconfig
+/Users/buraktelli/Documents/GitHub/Patika-Backend/Week 2 /For/For/obj/Debug/net7.0/For.AssemblyInfoInputs.cache
+/Users/buraktelli/Documents/GitHub/Patika-Backend/Week 2 /For/For/obj/Debug/net7.0/For.AssemblyInfo.cs
+/Users/buraktelli/Documents/GitHub/Patika-Backend/Week 2 /For/For/obj/Debug/net7.0/For.csproj.CoreCompileInputs.cache
+/Users/buraktelli/Documents/GitHub/Patika-Backend/Week 2 /For/For/obj/Debug/net7.0/For.dll
+/Users/buraktelli/Documents/GitHub/Patika-Backend/Week 2 /For/For/obj/Debug/net7.0/refint/For.dll
+/Users/buraktelli/Documents/GitHub/Patika-Backend/Week 2 /For/For/obj/Debug/net7.0/For.pdb
+/Users/buraktelli/Documents/GitHub/Patika-Backend/Week 2 /For/For/obj/Debug/net7.0/For.genruntimeconfig.cache
+/Users/buraktelli/Documents/GitHub/Patika-Backend/Week 2 /For/For/obj/Debug/net7.0/ref/For.dll
