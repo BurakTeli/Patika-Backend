@@ -1,13 +1,35 @@
-﻿int sayi;
-do
+﻿using System;
+using Internal;
+
+class Program
 {
-    Console.WriteLine("Lütfen bir sayı girin: ");
-    sayi = Convert.ToInt32(Console.ReadLine());
-
-    if (sayi <= 5)
+    static void Main()
     {
-        Console.WriteLine("Lütfen 5'ten büyük bir sayı girin.");
-    }
-} while (sayi <= 5);
+        int limit;
 
-Console.WriteLine("Tebrikler, girdiğiniz sayı 5'ten büyük!");
+        Console.WriteLine("Bir limit değeri giriniz:");
+        limit = Convert.ToInt32(Console.ReadLine());
+
+        // while döngüsü ile sayaç
+        int sayac = 0;
+        while (sayac <= limit)
+        {
+            Console.WriteLine("Ben bir Patika'lıyım");
+            sayac++;
+        }
+
+        Console.WriteLine("\n-------------------------\n");
+
+        // do-while döngüsü ile sayaç
+        int sayac2 = 0;
+        do
+        {
+            Console.WriteLine("Ben bir Patika'lıyım");
+            sayac2++;
+        } while (sayac2 <= limit);
+
+        // Farklılıklar:
+        // - `while` döngüsünde koşul, döngüye girmeden önce kontrol edilir. Eğer koşul başlangıçta sağlanmazsa döngü hiç çalışmaz.
+        // - `do-while` döngüsünde koşul, döngü sonunda kontrol edilir. Bu yüzden döngü en az bir kez çalışır, koşul sağlanmasa bile.
+    }
+}
