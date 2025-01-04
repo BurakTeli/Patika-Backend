@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/buraktelli/Documents/GitHub/Patika-Backend/Week3/Rasgele Sayı Bulma/Rastgele Sayı Bulma Oyunu.csproj": {}
+    "/Users/buraktelli/Documents/GitHub/Patika-Backend/Week3/Average calculation/Average calculation.csproj": {}
   },
   "projects": {
-    "/Users/buraktelli/Documents/GitHub/Patika-Backend/Week3/Rasgele Sayı Bulma/Rastgele Sayı Bulma Oyunu.csproj": {
+    "/Users/buraktelli/Documents/GitHub/Patika-Backend/Week3/Average calculation/Average calculation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/buraktelli/Documents/GitHub/Patika-Backend/Week3/Rasgele Sayı Bulma/Rastgele Sayı Bulma Oyunu.csproj",
-        "projectName": "Rastgele Sayı Bulma Oyunu",
-        "projectPath": "/Users/buraktelli/Documents/GitHub/Patika-Backend/Week3/Rasgele Sayı Bulma/Rastgele Sayı Bulma Oyunu.csproj",
+        "projectUniqueName": "/Users/buraktelli/Documents/GitHub/Patika-Backend/Week3/Average calculation/Average calculation.csproj",
+        "projectName": "Average calculation",
+        "projectPath": "/Users/buraktelli/Documents/GitHub/Patika-Backend/Week3/Average calculation/Average calculation.csproj",
         "packagesPath": "/Users/buraktelli/.nuget/packages/",
-        "outputPath": "/Users/buraktelli/Documents/GitHub/Patika-Backend/Week3/Rasgele Sayı Bulma/obj/",
+        "outputPath": "/Users/buraktelli/Documents/GitHub/Patika-Backend/Week3/Average calculation/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/buraktelli/.nuget/NuGet/NuGet.Config"

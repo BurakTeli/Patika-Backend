@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Hesap Makinesi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+86a317b0252daa4da02363dd1066f2f2791ac5db")]
 [assembly: System.Reflection.AssemblyProductAttribute("Hesap Makinesi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Hesap Makinesi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

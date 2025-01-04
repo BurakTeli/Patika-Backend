@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/buraktelli/Documents/GitHub/Patika-Backend/Week3/Rasgele Sayı Bulma/Rastgele Sayı Bulma Oyunu.csproj": {}
+    "/Users/buraktelli/Projects/1_privateProje/1_privateProje/1_privateProje.csproj": {}
   },
   "projects": {
-    "/Users/buraktelli/Documents/GitHub/Patika-Backend/Week3/Rasgele Sayı Bulma/Rastgele Sayı Bulma Oyunu.csproj": {
+    "/Users/buraktelli/Projects/1_privateProje/1_privateProje/1_privateProje.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/buraktelli/Documents/GitHub/Patika-Backend/Week3/Rasgele Sayı Bulma/Rastgele Sayı Bulma Oyunu.csproj",
-        "projectName": "Rastgele Sayı Bulma Oyunu",
-        "projectPath": "/Users/buraktelli/Documents/GitHub/Patika-Backend/Week3/Rasgele Sayı Bulma/Rastgele Sayı Bulma Oyunu.csproj",
+        "projectUniqueName": "/Users/buraktelli/Projects/1_privateProje/1_privateProje/1_privateProje.csproj",
+        "projectName": "1_privateProje",
+        "projectPath": "/Users/buraktelli/Projects/1_privateProje/1_privateProje/1_privateProje.csproj",
         "packagesPath": "/Users/buraktelli/.nuget/packages/",
-        "outputPath": "/Users/buraktelli/Documents/GitHub/Patika-Backend/Week3/Rasgele Sayı Bulma/obj/",
+        "outputPath": "/Users/buraktelli/Projects/1_privateProje/1_privateProje/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/buraktelli/.nuget/NuGet/NuGet.Config"
@@ -33,11 +33,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -59,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.402/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.317/RuntimeIdentifierGraph.json"
         }
       }
     }

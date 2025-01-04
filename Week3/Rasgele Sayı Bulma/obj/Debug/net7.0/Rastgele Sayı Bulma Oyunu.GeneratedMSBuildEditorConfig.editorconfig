@@ -8,4 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Rastgele_Sayı_Bulma_Oyunu
-build_property.ProjectDir = /Users/buraktelli/Projects/Rastgele Sayı Bulma Oyunu/Rastgele Sayı Bulma Oyunu/
+build_property.ProjectDir = /Users/buraktelli/Documents/GitHub/Patika-Backend/Week3/Rasgele Sayı Bulma/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

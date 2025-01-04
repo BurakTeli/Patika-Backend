@@ -88,7 +88,7 @@ class Program
         {
             return "Ajda Pekkan gibisin.;
         }
-        else if (letterGrade == "BB" || letterGrade == "BA" || letterGrade == "AA")
+        else if (letterGrade == "BB" || letterGrade == "BA")
         {
             return "Ajda Pekkan senin için gurur duyuyor.";
         }
