@@ -1,5 +1,6 @@
 ﻿using System;
 
+
 class Program
 {
     static void Main()
@@ -85,19 +86,19 @@ class Program
         // Return an appropriate message based on the letter grade
         if (letterGrade == "AA")
         {
-            return "Ajda Pekkan, you're just like her.";
+            return "Ajda Pekkan gibisin.;
         }
         else if (letterGrade == "BB" || letterGrade == "BA" || letterGrade == "AA")
         {
-            return "Ajda Pekkan is proud of you.";
+            return "Ajda Pekkan senin için gurur duyuyor.";
         }
         else if (letterGrade == "CB" || letterGrade == "CC" || letterGrade == "DC" || letterGrade == "DD")
         {
-            return "Ajda Pekkan is upset with you, just so you know.";
+            return "Ajda Pekkan sana küsmüş, haberin olsun.";
         }
         else
         {
-            return "Ajda Pekkan is going to curse you, prepare yourself.";
+            return "Ajda Pekkan sana küfür edecek, kendini hazırla.";
         }
     }
 }
