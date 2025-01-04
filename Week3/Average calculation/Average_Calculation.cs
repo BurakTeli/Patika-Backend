@@ -4,58 +4,58 @@ class Program
 {
     static void Main()
     {
-        Console.WriteLine("Ortalama Hesaplama Programına Hoş Geldiniz!");
+        Console.WriteLine("Welcome to the Average Calculation Program!");
 
         try
         {
-            // Notları al
-            Console.Write("Birinci notunuzu girin (0-100): ");
-            double not1 = Convert.ToDouble(Console.ReadLine());
+            // Get the grades from the user
+            Console.Write("Enter your first grade (0-100): ");
+            double grade1 = Convert.ToDouble(Console.ReadLine());
 
-            Console.Write("İkinci notunuzu girin (0-100): ");
-            double not2 = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Enter your second grade (0-100): ");
+            double grade2 = Convert.ToDouble(Console.ReadLine());
 
-            Console.Write("Üçüncü notunuzu girin (0-100): ");
-            double not3 = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Enter your third grade (0-100): ");
+            double grade3 = Convert.ToDouble(Console.ReadLine());
 
-            // Notların geçerliliğini kontrol et
-            if (not1 < 0 || not1 > 100 || not2 < 0 || not2 > 100 || not3 < 0 || not3 > 100)
+            // Validate the grades
+            if (grade1 < 0 || grade1 > 100 || grade2 < 0 || grade2 > 100 || grade3 < 0 || grade3 > 100)
             {
-                Console.WriteLine("Hata: Notlar 0 ile 100 arasında olmalıdır.");
+                Console.WriteLine("Error: Grades must be between 0 and 100.");
                 return;
             }
 
-            // Ortalama hesaplama
-            double ortalama = (not1 + not2 + not3) / 3;
-            Console.WriteLine($"\nOrtalamanız: {ortalama:F2}");
+            // Calculate the average using double type
+            double average = (grade1 + grade2 + grade3) / 3;
+            Console.WriteLine($"\nYour average: {average:F2}");
 
-            // Harf notu ve mesaj belirleme
-            string harfNotu = GetHarfNotu(ortalama);
+            // Determine the letter grade and message
+            string letterGrade = GetLetterGrade(average);
 
-            // Harf notuna göre ek mesaj belirleme
-            string ekMesaj = GetEkMesaj(harfNotu);
+            // Get the additional message based on the letter grade
+            string additionalMessage = GetAdditionalMessage(letterGrade);
 
-            // Sonuçları yazdırma 
-            Console.WriteLine($"Harf Notunuz: {harfNotu}");
-            Console.WriteLine(ekMesaj);
+            // Print the results
+            Console.WriteLine($"Your Letter Grade: {letterGrade}");
+            Console.WriteLine(additionalMessage);
         }
         catch (FormatException)
         {
-            Console.WriteLine("Hata: Lütfen geçerli bir sayı girin.");
+            Console.WriteLine("Error: Please enter a valid number.");
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Beklenmeyen bir hata oluştu: {ex.Message}");
+            Console.WriteLine($"An unexpected error occurred: {ex.Message}");
         }
 
-        Console.WriteLine("\nProgram sona erdi. Çıkmak için bir tuşa basın.");
+        Console.WriteLine("\nThe program has ended. Press any key to exit.");
         Console.ReadKey();
     }
 
-    static string GetHarfNotu(double ortalama)
+    static string GetLetterGrade(double average)
     {
-        // Not aralıkları ve karşılık gelen harf notları
-        var notlar = new (double min, double max, string harfNotu)[]
+        // Define grade ranges and corresponding letter grades
+        var grades = new (double min, double max, string letterGrade)[]
         {
             (90, 100, "AA"),
             (85, 89, "BA"),
@@ -68,35 +68,36 @@ class Program
             (0, 54, "FF")
         };
 
-        // Uygun harf notunu döndür
-        foreach (var (min, max, harfNotu) in notlar)
+        // Return the appropriate letter grade based on the average
+        foreach (var (min, max, letterGrade) in grades)
         {
-            if (ortalama >= min && ortalama <= max)
+            if (average >= min && average <= max)
             {
-                return harfNotu;
+                return letterGrade;
             }
         }
 
-        return "FF"; // Fallback (gerçekten bu durumu hiç görmemelisiniz, sadece güvenlik için)
+        return "FF"; // Fallback (this case should never occur, added for safety)
     }
 
-    static string GetEkMesaj(string harfNotu)
+    static string GetAdditionalMessage(string letterGrade)
     {
-        if (harfNotu == "AA")
+        // Return an appropriate message based on the letter grade
+        if (letterGrade == "AA")
         {
-            return "Ajda Pekkan gibisin.";
+            return "Ajda Pekkan, you're just like her.";
         }
-        else if (harfNotu == "BB" || harfNotu == "BA" || harfNotu == "AA")
+        else if (letterGrade == "BB" || letterGrade == "BA" || letterGrade == "AA")
         {
-            return "Ajda Pekkan senin için gurur duyuyor.";
+            return "Ajda Pekkan is proud of you.";
         }
-        else if (harfNotu == "CB" || harfNotu == "CC" || harfNotu == "DC" || harfNotu == "DD")
+        else if (letterGrade == "CB" || letterGrade == "CC" || letterGrade == "DC" || letterGrade == "DD")
         {
-            return "Ajda Pekkan sana küsmüş, haberin olsun.";
+            return "Ajda Pekkan is upset with you, just so you know.";
         }
         else
         {
-            return "Ajda Pekkan sana küfür edecek, kendini hazırla.";
+            return "Ajda Pekkan is going to curse you, prepare yourself.";
         }
     }
 }
