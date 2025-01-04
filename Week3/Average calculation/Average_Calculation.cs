@@ -1,4 +1,4 @@
-﻿ausing System;
+﻿using System;
 
 class Program
 {
@@ -30,14 +30,13 @@ class Program
             Console.WriteLine($"\nOrtalamanız: {ortalama:F2}");
 
             // Harf notu ve mesaj belirleme
-            string harfNotu = GetHarfNotu(ortalama, out string mesaj);
+            string harfNotu = GetHarfNotu(ortalama);
 
             // Harf notuna göre ek mesaj belirleme
             string ekMesaj = GetEkMesaj(harfNotu);
 
             // Sonuçları yazdırma 
             Console.WriteLine($"Harf Notunuz: {harfNotu}");
-            Console.WriteLine(mesaj);
             Console.WriteLine(ekMesaj);
         }
         catch (FormatException)
@@ -53,55 +52,51 @@ class Program
         Console.ReadKey();
     }
 
-    static string GetHarfNotu(double ortalama, out string mesaj)
+    static string GetHarfNotu(double ortalama)
     {
-        switch (ortalama)
+        // Not aralıkları ve karşılık gelen harf notları
+        var notlar = new (double min, double max, string harfNotu)[]
         {
-            case >= 90:
-                mesaj = "Ajda Pekkan senle çok gurur duyardı.";
-                return "AA";
-            case >= 85:
-                mesaj = "Ajda Pekkan gibisin, gurur duyardı.";
-                return "BA";
-            case >= 80:
-                mesaj = "Ajda Pekkan sevindi.";
-                return "BB";
-            case >= 75:
-                mesaj = "Ajda Pekkan ne diyeceğini bilemedi.";
-                return "CB";
-            case >= 70:
-                mesaj = "Ajda Pekkan üzgün.";
-                return "CC";
-            case >= 65:
-                mesaj = "Ajda Pekkan üzgün.";
-                return "DC";
-            case >= 60:
-                mesaj = "Ajda Pekkan küfür edecek.";
-                return "DD";
-            case >= 55:
-                mesaj = "Ajda Pekkan ...........";
-                return "FD";
-            default:
-                mesaj = "Ajda Pekkan ...........";
-                return "FF";
+            (90, 100, "AA"),
+            (85, 89, "BA"),
+            (80, 84, "BB"),
+            (75, 79, "CB"),
+            (70, 74, "CC"),
+            (65, 69, "DC"),
+            (60, 64, "DD"),
+            (55, 59, "FD"),
+            (0, 54, "FF")
+        };
+
+        // Uygun harf notunu döndür
+        foreach (var (min, max, harfNotu) in notlar)
+        {
+            if (ortalama >= min && ortalama <= max)
+            {
+                return harfNotu;
+            }
         }
+
+        return "FF"; // Fallback (gerçekten bu durumu hiç görmemelisiniz, sadece güvenlik için)
     }
 
     static string GetEkMesaj(string harfNotu)
     {
-        switch (harfNotu)
+        if (harfNotu == "AA")
         {
-            case "BB":
-            case "BA":
-            case "AA":
-                return "Ajda Pekkan senin için gurur duyuyor.";
-            case "CB":
-            case "CC":
-            case "DC":
-            case "DD":
-                return "Ajda Pekkan sana küsmüş, haberin olsun.";
-            default:
-                return "Ajda Pekkan sana küfür edecek, kendini hazırla.";
+            return "Ajda Pekkan gibisin.";
+        }
+        else if (harfNotu == "BB" || harfNotu == "BA" || harfNotu == "AA")
+        {
+            return "Ajda Pekkan senin için gurur duyuyor.";
+        }
+        else if (harfNotu == "CB" || harfNotu == "CC" || harfNotu == "DC" || harfNotu == "DD")
+        {
+            return "Ajda Pekkan sana küsmüş, haberin olsun.";
+        }
+        else
+        {
+            return "Ajda Pekkan sana küfür edecek, kendini hazırla.";
         }
     }
 }

@@ -1,0 +1,15 @@
+/Users/buraktelli/Projects/sadas/sadas/bin/Debug/net7.0/sadas
+/Users/buraktelli/Projects/sadas/sadas/bin/Debug/net7.0/sadas.deps.json
+/Users/buraktelli/Projects/sadas/sadas/bin/Debug/net7.0/sadas.runtimeconfig.json
+/Users/buraktelli/Projects/sadas/sadas/bin/Debug/net7.0/sadas.dll
+/Users/buraktelli/Projects/sadas/sadas/bin/Debug/net7.0/sadas.pdb
+/Users/buraktelli/Projects/sadas/sadas/obj/Debug/net7.0/sadas.csproj.AssemblyReference.cache
+/Users/buraktelli/Projects/sadas/sadas/obj/Debug/net7.0/sadas.GeneratedMSBuildEditorConfig.editorconfig
+/Users/buraktelli/Projects/sadas/sadas/obj/Debug/net7.0/sadas.AssemblyInfoInputs.cache
+/Users/buraktelli/Projects/sadas/sadas/obj/Debug/net7.0/sadas.AssemblyInfo.cs
+/Users/buraktelli/Projects/sadas/sadas/obj/Debug/net7.0/sadas.csproj.CoreCompileInputs.cache
+/Users/buraktelli/Projects/sadas/sadas/obj/Debug/net7.0/sadas.dll
+/Users/buraktelli/Projects/sadas/sadas/obj/Debug/net7.0/refint/sadas.dll
+/Users/buraktelli/Projects/sadas/sadas/obj/Debug/net7.0/sadas.pdb
+/Users/buraktelli/Projects/sadas/sadas/obj/Debug/net7.0/sadas.genruntimeconfig.cache
+/Users/buraktelli/Projects/sadas/sadas/obj/Debug/net7.0/ref/sadas.dll

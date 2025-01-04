@@ -7,5 +7,5 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
-build_property.RootNamespace = Average_calculation
-build_property.ProjectDir = /Users/buraktelli/Projects/Average calculation/Average calculation/
+build_property.RootNamespace = sadas
+build_property.ProjectDir = /Users/buraktelli/Projects/sadas/sadas/

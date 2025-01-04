@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/buraktelli/Projects/Average calculation/Average calculation/Average calculation.csproj": {}
+    "/Users/buraktelli/Projects/sadas/sadas/sadas.csproj": {}
   },
   "projects": {
-    "/Users/buraktelli/Projects/Average calculation/Average calculation/Average calculation.csproj": {
+    "/Users/buraktelli/Projects/sadas/sadas/sadas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/buraktelli/Projects/Average calculation/Average calculation/Average calculation.csproj",
-        "projectName": "Average calculation",
-        "projectPath": "/Users/buraktelli/Projects/Average calculation/Average calculation/Average calculation.csproj",
+        "projectUniqueName": "/Users/buraktelli/Projects/sadas/sadas/sadas.csproj",
+        "projectName": "sadas",
+        "projectPath": "/Users/buraktelli/Projects/sadas/sadas/sadas.csproj",
         "packagesPath": "/Users/buraktelli/.nuget/packages/",
-        "outputPath": "/Users/buraktelli/Projects/Average calculation/Average calculation/obj/",
+        "outputPath": "/Users/buraktelli/Projects/sadas/sadas/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/buraktelli/.nuget/NuGet/NuGet.Config"
