@@ -1,7 +1,11 @@
+
+
 class Program
 {
     static void Main()
+        
     {
+        Console.WriteLine("Patika Plus Gala Gecesine Hoşgeldiniz.");
 
         List<string> davetliler = new List<string>
         {
