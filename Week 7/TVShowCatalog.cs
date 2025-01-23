@@ -21,20 +21,11 @@ public class TVShow
         FirstBroadcastPlatform = firstBroadcastPlatform;
         StartYear = startYear;
     }
-}
 
-public class ComedyTVShow
-{
-    public string ShowName { get; set; }
-    public string ShowType { get; set; }
-    public string Director { get; set; }
-
-    // Constructor to create a comedy TV show object
-    public ComedyTVShow(string showName, string showType, string director)
+    // Override ToString() to print TV show details
+    public override string ToString()
     {
-        ShowName = showName;
-        ShowType = showType;
-        Director = director;
+        return $"{ShowName} ({ShowType}) - Director: {Director}, Start Year: {StartYear}";
     }
 }
 
@@ -56,23 +47,47 @@ class Program
             new TVShow("Yaprak Dökümü", 2006, "Drama", "Serdar Akar", "Kanal D", 2006)
         };
 
-        // Filter comedy TV shows
-        List<ComedyTVShow> comedyShows = tvShows
-            .Where(show => show.ShowType.ToLower().Contains("comedy"))
-            .Select(show => new ComedyTVShow(show.ShowName, show.ShowType, show.Director))
-            .ToList();
+        // Filtering comedy TV shows
+        var comedyShows = tvShows.Where(show => show.ShowType.ToLower().Contains("comedy")).ToList();
+        PrintList(comedyShows);
 
-        // Sort the comedy TV shows by name and director
-        var sortedComedyShows = comedyShows
-            .OrderBy(show => show.ShowName)
-            .ThenBy(show => show.Director)
-            .ToList();
+        // Filtering TV shows that started after 2010
+        var showsAfter2010 = tvShows.Where(show => show.StartYear > 2010).ToList();
+        PrintList(showsAfter2010);
 
-        // Print the sorted comedy TV shows
-        Console.WriteLine("\nComedy TV Shows:");
-        foreach (var show in sortedComedyShows)
+        // Sorting TV shows by year and director
+        var sortedByYearAndDirector = tvShows.OrderBy(show => show.StartYear).ThenBy(show => show.Director).ToList();
+        PrintList(sortedByYearAndDirector);
+
+        // Finding the TV show with the earliest start year
+        var earliestStartYearShow = tvShows.OrderBy(show => show.StartYear).First();
+        Console.WriteLine("\nTV Show with the earliest start year:");
+        Console.WriteLine(earliestStartYearShow);
+        Console.WriteLine("----------");
+
+        // Finding the TV show with the latest start year
+        var latestStartYearShow = tvShows.OrderByDescending(show => show.StartYear).First();
+        Console.WriteLine("\nTV Show with the latest start year:");
+        Console.WriteLine(latestStartYearShow);
+        Console.WriteLine("----------");
+    }
+
+    // Method to print the contents of a list
+    static void PrintList<T>(List<T> list)
+    {
+        // Check if the list has any elements
+        if (list.Any())
         {
-            Console.WriteLine($"Show Name: {show.ShowName}, Show Type: {show.ShowType}, Director: {show.Director}");
+            // Print each element in the list
+            list.ForEach(x => Console.WriteLine(x));
         }
+        else
+        {
+            // Print a message if the list is empty
+            Console.WriteLine("Listede eleman bulunamadı!");
+        }
+
+        // Print a separator line
+        Console.WriteLine("----------");
     }
 }
