@@ -4,19 +4,19 @@ using System.Linq;
 
 public class TVShow
 {
-    public string ShowName { get; set; }
-    public int Year { get; set; }
-    public string ShowType { get; set; }
+    public string ShowTitle { get; set; }
+    public int ReleaseYear { get; set; }
+    public string Genre { get; set; }
     public string Director { get; set; }
     public string FirstBroadcastPlatform { get; set; }
     public int StartYear { get; set; }
 
     // Constructor to create a new TV show object
-    public TVShow(string showName, int year, string showType, string director, string firstBroadcastPlatform, int startYear)
+    public TVShow(string showTitle, int releaseYear, string genre, string director, string firstBroadcastPlatform, int startYear)
     {
-        ShowName = showName;
-        Year = year;
-        ShowType = showType;
+        ShowTitle = showTitle;
+        ReleaseYear = releaseYear;
+        Genre = genre;
         Director = director;
         FirstBroadcastPlatform = firstBroadcastPlatform;
         StartYear = startYear;
@@ -25,7 +25,7 @@ public class TVShow
     // Override ToString() to print TV show details
     public override string ToString()
     {
-        return $"{ShowName} ({ShowType}) - Director: {Director}, Start Year: {StartYear}";
+        return $"{ShowTitle} ({Genre}) - Director: {Director}, Start Year: {StartYear}";
     }
 }
 
@@ -48,7 +48,7 @@ class Program
         };
 
         // Filtering comedy TV shows
-        var comedyShows = tvShows.Where(show => show.ShowType.ToLower().Contains("comedy")).ToList();
+        var comedyShows = tvShows.Where(show => show.Genre.ToLower().Contains("comedy")).ToList();
         PrintList(comedyShows);
 
         // Filtering TV shows that started after 2010
@@ -63,13 +63,11 @@ class Program
         var earliestStartYearShow = tvShows.OrderBy(show => show.StartYear).First();
         Console.WriteLine("\nTV Show with the earliest start year:");
         Console.WriteLine(earliestStartYearShow);
-        Console.WriteLine("----------");
-
+        
         // Finding the TV show with the latest start year
         var latestStartYearShow = tvShows.OrderByDescending(show => show.StartYear).First();
         Console.WriteLine("\nTV Show with the latest start year:");
         Console.WriteLine(latestStartYearShow);
-        Console.WriteLine("----------");
     }
 
     // Method to print the contents of a list
@@ -84,10 +82,7 @@ class Program
         else
         {
             // Print a message if the list is empty
-            Console.WriteLine("Listede eleman bulunamadı!");
+            Console.WriteLine("No element found in the list!");
         }
-
-        // Print a separator line
-        Console.WriteLine("----------");
     }
 }
