@@ -1,0 +1,118 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
+using System.ComponentModel.DataAnnotations;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Secret key for JWT
+var jwtKey = "supersecretkey123456789!";
+
+// Add DbContext with in-memory database
+builder.Services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("JwtDb"));
+
+// Configure JWT Authentication
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(opt =>
+{
+    opt.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = false,
+        ValidateAudience = false,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey))
+    };
+});
+
+builder.Services.AddAuthorization();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+var app = builder.Build();
+app.UseSwagger();
+app.UseSwaggerUI();
+
+app.UseAuthentication();
+app.UseAuthorization();
+
+// =================== MODELLER ===================
+public class User
+{
+    public int Id { get; set; }
+
+    [Required]
+    public string Email { get; set; }
+
+    [Required]
+    public string Password { get; set; }
+}
+
+public class LoginDto
+{
+    public string Email { get; set; }
+    public string Password { get; set; }
+}
+
+// =================== DB CONTEXT ===================
+public class AppDbContext : DbContext
+{
+    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+
+    public DbSet<User> Users => Set<User>();
+}
+
+// =================== API ROUTELAR ===================
+// Register endpoint
+app.MapPost("/register", async ([FromServices] AppDbContext db, [FromBody] User user) =>
+{
+    if (await db.Users.AnyAsync(u => u.Email == user.Email))
+        return Results.BadRequest("Email already exists.");
+
+    db.Users.Add(user);
+    await db.SaveChangesAsync();
+    return Results.Ok("User registered.");
+});
+
+// Login endpoint - JWT oluşturur
+app.MapPost("/login", async ([FromServices] AppDbContext db, [FromBody] LoginDto login) =>
+{
+    var user = await db.Users.FirstOrDefaultAsync(u => u.Email == login.Email && u.Password == login.Password);
+    if (user == null)
+        return Results.Unauthorized();
+
+    var claims = new[]
+    {
+        new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+        new Claim(ClaimTypes.Email, user.Email)
+    };
+
+    var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey));
+    var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+    var token = new JwtSecurityToken(
+        claims: claims,
+        expires: DateTime.Now.AddMinutes(60),
+        signingCredentials: creds
+    );
+
+    var jwt = new JwtSecurityTokenHandler().WriteToken(token);
+    return Results.Ok(new { token = jwt });
+});
+
+// JWT doğrulaması gereken örnek endpoint
+app.MapGet("/secure", [Authorize] () =>
+{
+    return Results.Ok("Bu alana JWT ile giriş yaptınız!");
+});
+
+app.Run();
